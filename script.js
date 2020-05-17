@@ -1,9 +1,9 @@
 var inc = 0.1;
+let time = -1;
 var scl = 10;
 var cols, rows;
-
+const SPRING_COLORS = [46.33, 12.86, 26.56, 188.92, 84.12];
 var zoff = 0;
-
 
 var particles = [];
 
@@ -11,7 +11,7 @@ var flowfield;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  colorMode(HSB, 255);
+  colorMode(HSB,255);
   cols = floor(width / scl);
   rows = floor(height / scl);
 
@@ -47,5 +47,4 @@ function draw() {
     particles[i].edges();
     particles[i].show();
   }
-
 }
